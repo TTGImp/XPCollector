@@ -1,0 +1,17 @@
+[
+{
+  "modid": "xpcollector",
+  "name": "XP Collector",
+  "description": "XP Orb Collector.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TTGImp"],
+  "credits": "Thanks to the Guys of EnderIO",
+  "logoFile": "",
+  "screenshots": [],
+  "requiredMods": ["EnderIO"],
+  "dependencies": []
+}
+]
