@@ -30,6 +30,9 @@ public class BlockXPCollector extends Block implements ITileEntityProvider{
     	super(Material.IRON);        
         
         setCreativeTab(ModBlocks.tabXPCollector);
+        this.setHarvestLevel("pickaxe", 1);
+        this.setHardness(7.0f);
+        this.setResistance(8.0f);
         setSoundType(SoundType.METAL);
         setUnlocalizedName(ModLib.xpBlocks.XPCOLLECTOR.getUnlocalizedName());
         this.blockName = ModLib.xpBlocks.XPCOLLECTOR.getUnlocalizedName();
@@ -65,11 +68,11 @@ public class BlockXPCollector extends Block implements ITileEntityProvider{
 		return new TileEntityXPCollector();
 	}
     
-	@Override
-    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-        super.breakBlock(world, pos, state);
-        world.removeTileEntity(pos);
-    }
+//	@Override
+//    public void breakBlock(World world, BlockPos pos, IBlockState state) {
+//        super.breakBlock(world, pos, state);
+//        world.removeTileEntity(pos);
+//    }
 
 	@SideOnly(Side.CLIENT)
     public Item getItem(World worldIn, BlockPos pos)

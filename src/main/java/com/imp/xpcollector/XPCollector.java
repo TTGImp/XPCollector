@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.imp.xpcollector.core.CommonProxy;
 import com.imp.xpcollector.core.ModBlocks;
+import com.imp.xpcollector.core.recipes.ModRecipes;
 import com.imp.xpcollector.lib.ModLib;
 
 @Mod(modid = ModLib.MOD_ID, name = ModLib.MOD_NAME, version = ModLib.VERSION)
@@ -32,6 +33,8 @@ public class XPCollector {
     public void Init(FMLInitializationEvent event) {
 		
 		proxy.registerRenders();
+		
+		ModRecipes.init();
 		
 	}
 	
