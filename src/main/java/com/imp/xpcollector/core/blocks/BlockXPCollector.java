@@ -45,11 +45,19 @@ public class BlockXPCollector extends Block implements ITileEntityProvider{
     
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
     {
+    	if(!worldIn.isRemote && hand == EnumHand.MAIN_HAND)
+    	{
     	TileEntityXPCollector col = (TileEntityXPCollector) worldIn.getTileEntity(pos);
 
     	int testMessage = col.tank.getFluidAmount();
-    	playerIn.addChatMessage(new TextComponentString("Amount - " + testMessage));
+    	
+    	playerIn.addChatMessage(new TextComponentString("XP Collected - " + testMessage));
 		return true;
+    	}
+    	else 
+    	{
+    		return false;
+    	}
     }
     
 	@Override

@@ -7,7 +7,7 @@ public class ModLib {
     public static final String CLIENT = "com.imp.xpcollector.client.ClientProxy", COMMON = "com.imp.xpcollector.core.CommonProxy";
     
     public static enum xpBlocks {
-    	XPCOLLECTOR("xpCollector", "BlockXPCollector");
+    	XPCOLLECTOR("xp_Collector", "xp_Collector");
     	
     	private String unlocalizedName;
     	private String registryName;
